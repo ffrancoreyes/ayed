@@ -98,7 +98,7 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
    - Asegúrate de agregar la ruta del compilador a las variables de entorno del sistema. Esto se hace de la siguiente forma.
      1. Vamos a ir a donde instalamos gcc o g++ en mi caso es **C:\MinGW\bin**, luego de encontrar la ubicación de **g++.exe** copiamos la ruta, de nuevo, en mi caso es **C:\MinGW\bin**
      2. En el buscador de Widows buscamos **"variables de entorno"** y entramos en **Editar variables de entorno del sistema**
-     ![Variables de entorno](/img/imagenes-readMe/imagen10.PNG)   
+     - ![Variables de entorno](/img/imagenes-readMe/imagen10.PNG)   
      3. Entramos en **variables de entorno**
      - ![imagen de variables de entorno](/img/imagenes-readMe/imagen11.PNG)
      4. Se va a ver algo como lo siguiente
