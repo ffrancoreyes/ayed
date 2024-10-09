@@ -82,15 +82,15 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
    - Como nosotros necesitamos usar solo el compilador de c++, vamos a marcar los siguientes elementos
      - mingw32-base
      - mingw32-gcc-g++
-    ![Imagen donde marcamos ambos elementos para la instalación](/img/imagenes-readMe/imagen2.PNG)
+     - ![Imagen donde marcamos ambos elementos para la instalación](/img/imagenes-readMe/imagen2.PNG)
    - Todo entonces nos debe quedar así
     ![todos los elementos marcados para la instalación](/img/imagenes-readMe/imagen3.PNG)
    - Ahora, para instalar todo vamos a **Installation > Apply changes > Apply**
     ![imagen de aplicar cambios para instalar todo](/img/imagenes-readMe/imagen4.PNG)
    - Una vez terminado, le damos al botón **Close**
-    ![imagen dandole click al botón close](/img/imagenes-readMe/imagen5.PNG)
+   - ![imagen dandole click al botón close](/img/imagenes-readMe/imagen5.PNG)
    - Ahora nos toca verificar si todo está correctamente instalado. para ello nos vamos a ir a escriptorio y en algún lugar donde no haya nada hacemos **Shift + Click Derecho**, nos va a aparecer algo así
-   ![abrir con windows PowerShell](/img/imagenes-readMe/imagen6.PNG)
+   - ![abrir con windows PowerShell](/img/imagenes-readMe/imagen6.PNG)
    - Damos click a abrir con Windos PowerShell y escribimos en la consola **gcc --version** y **Enter**. Si nos sale de la siguiente forma, significa que se instaló correctamente. 
     ![Comprobando si el gcc está instalado en PowerShell](/img/imagenes-readMe/imagen7.PNG)
    - Ahora, en caso que nos haya salido lo siguiente
@@ -100,11 +100,11 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
      2. En el buscador de Widows buscamos **"variables de entorno"** y entramos en **Editar variables de entorno del sistema**
      ![Variables de entorno](/img/imagenes-readMe/imagen10.PNG)   
      3. Entramos en **variables de entorno**
-     ![imagen de variables de entorno](/img/imagenes-readMe/imagen11.PNG)
+     - ![imagen de variables de entorno](/img/imagenes-readMe/imagen11.PNG)
      4. Se va a ver algo como lo siguiente
-     ![Variables de entorno existentes en windows](/img/imagenes-readMe/imagen12.PNG)
+     - ![Variables de entorno existentes en windows](/img/imagenes-readMe/imagen12.PNG)
      5. Damos Click a **Path > Editar**
-     ![Editar Path en variables de entorno](/img/imagenes-readMe/imagen13.PNG)
+     - ![Editar Path en variables de entorno](/img/imagenes-readMe/imagen13.PNG)
      6. Damos click a **Nueva > (pegar dirección de tu g++)**. Luego de esto solo nos queda dar **Ok > Ok > Ok**
      7. Terminamos el proceso verificando en el Windows PowerShell si quedó instalado escribiendo **gcc --version**.
      ![Comprobando si el gcc está instalado en PowerShell](/img/imagenes-readMe/imagen7.PNG)  
@@ -155,7 +155,7 @@ int main(){
 }
 ```
 - Nuestro código va a quedar así
-![Código de c++ en VsCode](/img/00%20-%20Hola%20Mundo/imagen3.PNG) 
+- ![Código de c++ en VsCode](/img/00%20-%20Hola%20Mundo/imagen3.PNG) 
 - Luego con **F8** compilamos y ejecutamos nuestro programa y nos va a ejecutar un archivo **.exe**
 ![Hola Mundo compilado y ejecutado](/img/00%20-%20Hola%20Mundo/imagen2.PNG) 
 
