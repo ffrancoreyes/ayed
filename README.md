@@ -23,12 +23,24 @@ Si tienes dudas o consultas:
     - [Instalación y configuración:](#instalación-y-configuración-1)
   - [Visual Studio Code (VSCode)](#visual-studio-code-vscode)
     - [Instalación y configuración:](#instalación-y-configuración-2)
-- [Capitulo 1: Hola Mundo](#capitulo-1-hola-mundo)
+- [Capítulo 1: Hola Mundo](#capítulo-1-hola-mundo)
   - [Características clave](#características-clave)
   - [Hola Mundo](#hola-mundo)
   - [Entendiendo el Hola Mundo](#entendiendo-el-hola-mundo)
   - [Atajos y Tips que nos van a servir](#atajos-y-tips-que-nos-van-a-servir)
-    - [Ejercicios:](#ejercicios)
+  - [Ejercicios:](#ejercicios)
+- [Capítulo 2: Tipos de variables](#capítulo-2-tipos-de-variables)
+  - [Tipos de variables](#tipos-de-variables)
+    - [Tipos de datos primitivos](#tipos-de-datos-primitivos)
+    - [Tipo de datos compuestos](#tipo-de-datos-compuestos)
+  - [Usando lo aprendido de variables](#usando-lo-aprendido-de-variables)
+  - [Repaso del capítulo.](#repaso-del-capítulo)
+  - [Ejercicios:](#ejercicios-1)
+- [Capítulo 3: Condicionales](#capítulo-3-condicionales)
+  - [Tipos de operadores](#tipos-de-operadores)
+  - [If y Else](#if-y-else)
+  - [If anidado y Else If](#if-anidado-y-else-if)
+  - [Switch](#switch)
 
 
 ## Introducción: Configurando nuestro entorno de desarrollo
@@ -124,7 +136,7 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
 
 Con todo esto, ya vas a estar listo para poder codear con c++ en VsCode, CodeBlocks o Dev C++, eso nos da pie al siguiente Eje **"Hola Mundo"**
 
-## Capitulo 1: Hola Mundo
+## Capítulo 1: Hola Mundo
 
 C++ es un lenguaje de programación de propósito general que se destaca por ser eficiente y flexible. Desarrollado por Bjarne Stroustrup en 1983, es una extensión del lenguaje C con características orientadas a objetos, lo que lo hace adecuado para el desarrollo de sistemas operativos, software embebido, videojuegos, y aplicaciones que requieren alto rendimiento.
 
@@ -229,5 +241,391 @@ A este lo usamos cuando necesitamos dejar escrita mas de una línea de comentari
   - Para clases: **PascalCase**.
   - Para constantes y macros: **snake_case**.
 
-#### Ejercicios:
+### Ejercicios:
 1. Escriba un programa que devuelva el texto `Hola me llamo <nombre>, como estás?`
+
+
+## Capítulo 2: Tipos de variables
+
+En todos los lenguajes de programación que vayamos a tocar, tenemos variables. Pero que es una variable?
+
+Una **variable** es un espacio en la memoria de un programa donde se almacena un valor que puede cambiar durante la ejecución del mismo. Se utilizan para almacenar datos y referencias que pueden ser manipulados por el programa.
+
+Al crear una variable, se le asigna un **nombre** (identificador) y un tipo de dato, que determina el tipo de valor que la variable puede contener, así como las operaciones que se pueden realizar sobre ella.
+
+A ver, ya entendimos que es una variable. Pero,  ¿cómo es su estructura?
+
+```cpp
+tipo nombreVariable;
+```
+Algunos ejemplos de variables pueden ser las siguientes:
+
+```cpp
+int edad = 21;
+float altura = 1.70;
+char inicial = 'F';
+```
+
+### Tipos de variables
+
+Existen varios tipos de variables en C++, que corresponden a los distintos tipos de datos que puede manejar el lenguaje. Estos se dividen principalmente en dos categorías: **tipos de datos primitivos** y **tipos de datos compuestos**.
+
+#### Tipos de datos primitivos
+
+Son los tipos básicos que proporciona el lenguaje de forma nativa. Entre los más comunes se encuentran:
+
+1. **Tipo Entero**: El tipo `int` se utiliza para almacenar números enteros, tanto positivos como negativos, sin decimales.
+
+```cpp
+int edad = 25;  // ejemplo de variable de tipo entero
+```
+2. **Tipo Caracter (`char`)**: El tipo char almacena un solo carácter (como una letra, número o símbolo), y se representa entre comillas simples (').
+
+```cpp
+char sexo = 'M'; //ejemplo de variable de tipo caracter
+```
+3. **Tipo Flotante**: Estos tipos se utilizan para almacenar números con punto decimal.
+
+   - `float` almacena números de precisión simple (menor precisión).
+   - `double` almacena números de precisión doble (mayor precisión).
+
+```cpp
+float altura = 1.70;   // Un número flotante de precisión simple
+double peso = 70.12345; // Un número flotante de precisión doble
+```
+
+4. **Tipo Booleano**: El tipo bool puede almacenar uno de dos valores: `true` o `false`. Es utilizado para condiciones lógicas.
+
+```cpp
+bool mayorEdad = true; //ejemplo de variable de tipo booleana
+```
+
+#### Tipo de datos compuestos
+
+> [!WARNING]
+> Si bien voy a explicar que son los tipos de datos compuestos, como recien estamos empezando con c++, nosotros nos vamos a centrar en los tipos de datos primitivos.
+
+Además de los tipos primitivos, C++ también tiene tipos de datos más complejos que permiten almacenar colecciones o estructuras de datos más elaboradas. Ellos son:
+
+1. **Tipo Cadenas de texto (string)**: Aunque el tipo char permite almacenar un solo carácter, si deseas almacenar un conjunto de caracteres (una cadena), se utiliza el tipo `string`.
+
+```cpp
+#include <string> //librería que nos va a permitir usar string
+string nombre = "Fabrizzio"; //ejemplo de variable de tipo cadena
+```
+
+2. **Arreglos (array)**: Un arreglo es una colección de elementos del mismo tipo, almacenados en posiciones contiguas de memoria.
+
+```cpp
+int numeros [5] = {1,2,3,4,5}; // ejemplo de variable tipo array
+```
+
+3.  **Tipo Estructuras (struct)**: Las estructuras permiten agrupar varios tipos de datos en una sola entidad. Se utiliza para definir un tipo personalizado.
+
+```cpp
+struct persona{
+  string nombre;
+  int edad;
+  int dni;
+  char sexo;
+}
+```
+
+4. **Tipo Punteros (pointer)**: Un puntero es una variable que almacena la dirección de memoria de otra variable.
+
+```cpp
+int numero = 10;
+int* punteroNumero = &numero;  // Puntero a la dirección de memoria de 'numero'
+```
+
+> [!CAUTION]
+> Es bueno aclarar que c++ es key sensitive, pero que quiero decir con esto? Cuando vayamos a declarar una variable tengamos en cuenta no usar espacios (` `) o si vamos a usar alguna mayúscula, recordar que esa variable tiene esa mayúscula, porque no es lo mismo `variable` que `Variable`
+
+Pero bien, ya sabemos casi la mayoría de cosas básicas que nos van a servir a lo largo de toda la materia, ahora nos toca empezar a programar un poco.
+
+### Usando lo aprendido de variables
+No nos sirve de nada solo ver un texto aburrido sin poner en práctica todo lo que vamos aprendiendo, por lo que ahora vamos a hacer un programa en el que podamos pedir datos al usuario, guardarlos en una variable.
+
+> [!TIP]
+> Para poder capturar lo que el usuario nos ingresa tenemos dos formas, en caso de ser un string, usamos `getline(cin,variable);` y en caso de ser una variable primitiva, ya sea int, float, double, etc. Usamos `cin >> variable`, incluso podemos guardar variables múltiples con el `cin`, por ejemplo: `cin >> edad >> altura;`
+
+En el siguiente ejercicio vamos a declarar 3 variables
+- Nombre (String)
+- Edad (Int)
+- Altura (Float)
+Con esas 3 variables vamos a devolver un solo texto con todos los datos que ingresó el usuario, por lo que nuestro programa se vería así.
+
+```cpp
+#include <iostream>
+#include <string> //para poder usar strings
+using namespace std;
+
+int main(){
+    //declaración de variables que vamos a usar
+    int edad;
+    float altura;
+    string nombre;
+    // pedimos al usuario que ingrese sus datos
+    cout << "Ingrese su nombre: ";
+    getline(cin,nombre); // con el getline(cin,variable) capturamos lo que el usuario ingresó
+    cout << "Ingrese su edad: "; cin >> edad;
+    cout << "Ingrese su altura: "; cin >> altura;
+
+    //mostramos lo que el usuario ingresó
+    cout << "Hola " << nombre << ", tienes " << edad << " años y mides: " << altura <<  endl;
+
+    return 0;
+}
+```
+### Repaso del capítulo.
+Tenemos varios tipos de variables, **Tipo de dato primitivo** y **Tipo de dato compuesto**. Este cuadro te va a ayudar a memorizar todos los tipos de datos y sus rangos
+
+
+| **Tipo de Dato**          | **Tamaño (bytes)** | **Rango de Valores**                                    | **Descripción**                               |
+|---------------------------|-------------------|--------------------------------------------------------|-----------------------------------------------|
+| `char`                    | 1                 | -128 .. 127                                             | Carácter con signo, sigue el estándar ASCII.  |
+| `unsigned char`           | 1                 | 0 .. 255                                                | Carácter sin signo, sigue el ASCII extendido. |
+| `short`                   | 2                 | -32,768 .. 32,767                                       | Entero corto con signo.                      |
+| `unsigned short`          | 2                 | 0 .. 65,535                                             | Entero corto sin signo.                      |
+| `int`                     | 4                 | -2,147,483,648 .. 2,147,483,647                         | Entero con signo, tamaño estándar.           |
+| `unsigned int`            | 4                 | 0 .. 4,294,967,295                                      | Entero sin signo.                            |
+| `long`                    | 4                 | -2,147,483,648 .. 2,147,483,647                         | Entero largo con signo (igual a `int` en sistemas de 32 bits). |
+| `unsigned long`           | 4                 | 0 .. 4,294,967,295                                      | Entero largo sin signo.                      |
+| `long long`               | 8                 | -9,223,372,036,854,775,808 .. 9,223,372,036,854,775,807 | Entero largo extendido con signo (64 bits).  |
+| `unsigned long long`      | 8                 | 0 .. 18,446,744,073,709,551,615                         | Entero largo extendido sin signo (64 bits).  |
+| `float`                   | 4                 | 3.4 x 10⁻³⁸ .. 3.4 x 10³⁸                               | Número en punto flotante de precisión simple (7 dígitos de precisión). |
+| `double`                  | 8                 | 1.7 x 10⁻³⁰⁸ .. 1.7 x 10³⁰⁸                            | Número en punto flotante de precisión doble (15 dígitos de precisión). |
+| `long double`             | 8 o más           | Depende de la implementación, mayor que `double`.       | Número en punto flotante de precisión extendida. |
+| `enum`                    | Igual a `int`     | Mismo que el tipo `int`.                                | Definido por el usuario, asigna valores enteros. |
+
+
+
+
+Ya tenemos mas conocimientos y un panorama general sobre lo que son los **tipos de datos** y también sabemos cómo hacer un programa de entrada y salida de datos en c++. Pero que te parece si subimos un poco la dificultad y hacemos algunos ejercicios.
+
+### Ejercicios:
+
+1. **Cuál de las siguientes sentencias son correctas para la ecuación algebraica?  y= (ax^3) + 7**  
+   - a. `y = a * x * x * x + 7`  
+   - b. `y = a * x * x * (x + 7)`  
+   - c. `y = (a * x) * x * (x + 7)`  
+   - d. `y = (a * x) * x * x + 7`  
+   - e. `y = a * (x * x * x) + 7`  
+   - f. `y = a * (x * x * x + 7)`  
+   
+
+2. **Escriba un programa que pida al usuario dos números e informe la suma, la resta, el producto y el cociente de los mismos**  
+   
+
+3. **Imprima un programa que imprima los números del 1 al 4 en una misma línea de las siguientes maneras:**
+   - a. Utilizando un solo operador de inserción de flujo.
+   - b. Una única sentencia con 4 operadores de inserción de flujo.
+   - c. Utilizando cuatro sentencias.  
+   
+
+4. **Escriba un programa que reciba un número que represente el radio de un círculo e imprima el diámetro, la circunferencia y el área**  
+   
+
+5. **Que imprime el siguiente código?**  
+   - a. `std::cout << “*\n**\n***\n****” << std::endl;`  
+   - b. `std::cout << 'A';`  
+   - c. `std::cout << static_cast<int>('A');` (investigue qué es `static_cast`)  
+   
+
+6. **Escriba un programa que calcule los cuadrados y cubos de los números de 0 a 10 y los muestre por pantalla**  
+
+
+
+## Capítulo 3: Condicionales
+En nuestra vida diaria nosotros solemos tomar decisiones de diferentes tipos, un ejemplo puede ser, `Llegué a mi casa de cursar algoritmos, hay comida en casa? Si hay comida almuerzo. Si no hay comida, me preparo de cocinar`. La lógica en c++ funciona de la misma manera. Los **condicionales** permiten que un programa tome decisiones y ejecute diferentes bloques de código según ciertas condiciones. Es decir, controlan el **flujo de ejecución** del programa dependiendo de si una condición es verdadera o falsa. Las principales estructuras condicionales que veremos son:
+
+- **`if`**: La estructura condicional básica que evalúa si una expresión es verdadera o falsa.
+- **`else`**: Se usa junto con el `if` para ejecutar una alternativa cuando la condición es falsa.
+- **`else if`**: Permite agregar múltiples condiciones a la estructura `if`.
+- **`switch`**: Se utiliza cuando se necesita evaluar una expresión y ejecutar diferentes bloques de código según el valor de esa expresión.
+
+### Tipos de operadores
+Antes de seguir con condicionales debemos entender algo importante para poder realizar los ejercicios, los tipos de operadores. Ellos nos van a permitir realizar compraraciónes, cuentas aritméticas, etc. Ellos son:
+
+
+| **Tipo de Operadores**                               | **Operador**                          | **Descripción**                                                |
+|------------------------------------------------------|---------------------------------------|----------------------------------------------------------------|
+| Operadores de acceso                                 | `()`                                  | Invocación a función                                           |
+|                                                      | `[]`                                  | Subíndice de arreglo                                           |
+|                                                      | `.`                                   | Acceso a `struct` y `union`                                    |
+|                                                      | `->`                                  | Acceso a `struct` y `union` a través de puntero                |
+| Operadores unarios                                   | `+` / `-`                             | Signos positivo y negativo                                     |
+|                                                      | `~`                                   | Complemento por bit                                            |
+|                                                      | `!`                                   | NOT lógico                                                     |
+|                                                      | `&`                                   | Dirección de variable                                          |
+|                                                      | `*`                                   | "Indirección" (puntero)                                        |
+|                                                      | `++`                                  | Pre-incremento                                                 |
+|                                                      | `--`                                  | Pre-decremento                                                 |
+|                                                      | `sizeof`                              | Tamaño de                                                      |
+|                                                      | `(tipo)`                              | Conversión explícita                                           |
+| Operadores multiplicativos                           | `*`                                   | Multiplicación                                                 |
+|                                                      | `/`                                   | División                                                       |
+|                                                      | `%`                                   | Módulo o resto                                                 |
+| Operadores aditivos                                  | `+`                                   | Suma                                                          |
+|                                                      | `-`                                   | Resta                                                         |
+| Operadores de desplazamiento                         | `<<`                                  | Desplazamiento de bits a la izquierda                          |
+|                                                      | `>>`                                  | Desplazamiento de bits a la derecha                            |
+| Operadores relacionales                              | `<`, `>`                              | Menor que, Mayor que                                           |
+|                                                      | `<=`, `>=`                            | Menor o igual, Mayor o igual                                   |
+| Operadores de igualdad                               | `==`, `!=`                            | Igual a, Distinto de                                           |
+| Operadores binarios por bit                          | `&`                                   | AND por bit                                                    |
+|                                                      | `^`                                   | OR exclusivo (XOR)                                             |
+|                                                      | `I`                                   | OR por bit                                                     |
+| Operadores binarios lógicos                          | `&&`                                  | AND lógico                                                     |
+|                                                      | `II`                                  | OR lógico                                                      |
+| Operador condicional                                 | `?:`                                  | Operador ternario                                              |
+| Operadores de asignación                             | `=`                                   | Asignación                                                     |
+|                                                      | `*=`, `/=`, `%=`, `+=`, `-=`          | Asignación con multiplicación, división, módulo, suma, resta   |
+|                                                      | `<<=`, `>>=`, `&=`, `^=`, `I=`        | Asignación con desplazamiento, AND, XOR, OR                    |
+| Operador de concatenación de expresiones             | `,`                                   | Coma (concatenación de expresiones)                            |
+
+>[!WARNING]
+> En el cuadro anterior, usé la Letra I (i latina mayúscula) para representar "||" debido a que a la hora de armar el cuadro, el cuadro se rompía
+
+
+> [!NOTE]
+> Los operadores `&&`, `||` y la **coma** `,` garantizan que los operandos sean evaluados de izquierda a derecha.
+> El operador condicional `(?:)` evalúa solo uno de los dos últimos operandos, dependiendo de la condición.
+
+
+### If y Else
+Ahora, pongamos en código el ejemplo de la comida que planteamos líneas más arriba.
+nuestra lógica va a ser la siguiente
+
+```cpp
+if(hayComida){
+  como;
+} else{
+  mePreparoDeComer;
+}
+```
+por lo que nuestro código en c++ quedaría así:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    //para este ejemplo, vamos a suponer que no hay comida
+    bool comida = false;
+
+    //si hay comida, como
+    if(comida){
+        cout << "Si hay comida :)" << endl;
+        cout << "Voy a comer porque tengo hambre" << endl;
+    }else{ //si no hay comida, me cocino
+        cout << "No hay comida :(" << endl;
+        cout << "Voy a cocinarme para luego poder comer" << endl;
+    }
+
+    return 0;
+}
+```
+
+### If anidado y Else If
+
+Ahora, como no todo en la vida es fácil, vamos a complicarnos un poco. A lo que hicimos recién vamos a agregarle un poco de complejidad y vamos a incluir un factor importante que es si tengo comida para cocinar. Y vamos a ver un el concepto de **if anidado** y el concepto de **else if**. El if anidado no es más que un if dentro de otro if y el else if nos permite agregar un condicional a la respuesta negativa de nuestro if. La lógica de nuestro programa quedaría así
+
+```cpp
+if(hayComida){
+  como;
+} else if(tengoParaCocinar){
+    mePreparoDeComer;
+  { 
+  }else{
+    if(tengoDinero){
+      voyAlSuper;
+    }else{
+      meQuedoConHambre;
+    }  
+  }
+}
+```
+
+Nuestro programa hecho en código va a quedar de la siguiente forma:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(){
+    //para este ejemplo, vamos a suponer que no hay comida pero que si me alcanza para comprarme
+    bool comida = false;
+    bool tengoParaCocinar = false;
+    float dinero = 40.5;
+
+    /*
+    Me pregunto si hay comida, en caso de que haya comida voy a comer. 
+    Si no hay comida pero si tengo para preparar, me preparo comida. 
+    Ahora, si no tengo para preparar me pregunto si tengo dinero, 
+    necesito mínimo 39 dolares para poder comprarme algo de comer, si tengo mas que 39 dólares, voy al super. 
+    Caso contrario, no me preparo nada de comer y no como.
+    */
+    if(comida){
+        cout << "Si hay comida :)" << endl;
+        cout << "Voy a comer porque tengo hambre" << endl;
+    }else if(tengoParaCocinar){ 
+        cout << "No hay comida :(" << endl;
+        cout << "Voy a cocinarme para luego poder comer" << endl;
+    }else{
+        if(dinero > 39){
+            cout << "Voy al super a comprarme de comer" << endl;
+        }else{
+            cout << "Hoy no voy a poder comer :c" << endl;
+        }
+    }
+    
+    return 0;
+}
+```
+
+### Switch
+Supongamos ahora que nos encontramos en la situación donde no encontramos comida, tampoco tenemos para preparar en casa, pero si tenemos dinero para ir a comprar, por lo que fuimos al super y tenemos varias opciones para elegir
+- pollo al curry
+- fideos con tuco
+- milanesa napolitana
+- pizza
+
+si bien podemos hacer un if gigante con todas las opciones
+
+```cpp
+if (compra == "pollo al curry"){
+  comoPolloAlCurry;
+}else if (compra == "fideos con tuco"){
+  comoFideosConTuco;
+}else if (compra == "milanesa napolitana"){
+  comoMilanesaNapolitana;
+}else if (compra == "pizza"){
+  comoPizza;
+}else{
+  noComoNada;
+}
+```
+
+Si bien esto es válido, no es correcto, al contrario, es horriblemente malo. Hay una forma de hacerlo más fácil el Switch. su estructura es la siguiente
+
+```cpp
+switch (compra){
+  case "pollo al curry":
+    comoPolloAlCurry;
+    break;
+  case "fideos con tuco":
+    comoFideosConTuco;
+    break;
+  case "milanesa napolitana":
+    comoMilanesaNapolitana;
+    break;
+  case "pizza":
+    comoPizza;
+    break;
+  default:
+    cout << "no me decido por nada, entonces hoy no voy a comer" << endl;
+}
+```
+
+
