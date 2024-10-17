@@ -13,7 +13,7 @@ Si tienes dudas o consultas:
 
 - **Fabrizzio Franco Reyes** - Ayudante de cátedra y Estudiante de Ingeniería en Sistemas.
 - **Correo**: [ffrancoreyes@frba.utn.edu.ar](mailto:ffrancoreyes@frba.edu.ar)
-  **LinkedIn**: [Perfil de LinkedIn](https://linkedin.com/in/fabrizziofrancoreyes)
+- **LinkedIn**: [Perfil de LinkedIn](https://linkedin.com/in/fabrizziofrancoreyes)
 - **GitHub**: [Perfil GitHub](https://github.com/ffrancoreyes)
 
 ### índice:
