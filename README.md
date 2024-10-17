@@ -13,6 +13,7 @@ Si tienes dudas o consultas:
 
 - **Fabrizzio Franco Reyes** - Ayudante de cátedra y Estudiante de Ingeniería en Sistemas.
 - **Correo**: [ffrancoreyes@frba.utn.edu.ar](mailto:ffrancoreyes@frba.edu.ar)
+  **LinkedIn**: [Perfil de LinkedIn](https://linkedin.com/in/fabrizziofrancoreyes)
 - **GitHub**: [Perfil GitHub](https://github.com/ffrancoreyes)
 
 ### índice:
@@ -41,6 +42,10 @@ Si tienes dudas o consultas:
   - [If y Else](#if-y-else)
   - [If anidado y Else If](#if-anidado-y-else-if)
   - [Switch](#switch)
+- [Capitulo N: Templates o plantillas de función y tipos de datos dinámicos.](#capitulo-n-templates-o-plantillas-de-función-y-tipos-de-datos-dinámicos)
+  - [¿Qué es un template en C++?](#qué-es-un-template-en-c)
+  - [¿Cómo declaramos un template y como lo usamos?](#cómo-declaramos-un-template-y-como-lo-usamos)
+  - [Ejercicios](#ejercicios-2)
 
 
 ## Introducción: Configurando nuestro entorno de desarrollo
@@ -82,7 +87,7 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
 **Visual Studio Code** es un editor de código ligero, pero muy potente, que se puede usar para programar en muchos lenguajes, incluyendo C++. Es muy flexible gracias a sus extensiones y ofrece una experiencia de desarrollo moderna.
 
 > [!WARNING]
-> Si ya tienes instalado otro compilador de C++ (como Dev c++ o CodeBlocks), esta opción no te va a funcionar, debes desinstalar primero otros compiladores de c++.
+> Nota del editor: Si ya tenés instalado otro IDE de C++ (como Dev c++ o CodeBlocks) debes hacer algunos pasos extra para que pueda funcionar VsCode correctamente. Se recomienda desinstalar otros IDEs en caso de querer usar solo VSCode
 
 #### Instalación y configuración:
 1. **Descarga**: Descarga VSCode desde su página oficial: [VSCode](https://code.visualstudio.com/).
@@ -628,4 +633,79 @@ switch (compra){
 }
 ```
 
+## Capitulo N: Templates o plantillas de función y tipos de datos dinámicos.
 
+### ¿Qué es un template en C++?
+Un **template** es una forma de definir funciones o clases en C++ que pueden trabajar con cualquier tipo de dato (como `int`, `float`, `double`, `char`, etc.), sin tener que especificar de antemano el tipo exacto de dato. Esto te permite escribir código más genérico y reutilizable.
+
+La traducción sería, una función que podemos usar muchas veces con distintos tipos de datos sin tener crear una para cada tipo de dato.
+
+### ¿Cómo declaramos un template y como lo usamos?
+Para poder usar los templates podemos hacerlo de la siguiente forma:
+```cpp
+  template <class nombreDato> //en nombre dato va a ir el nombre que querramos
+  void funcion(nombreDato nombreVariable);
+```
+
+También tenemos otra forma de definirlo que es igual de correcta y funciona de la misma forma que el class
+
+```cpp
+  template <typename nombreDato>
+  void funcion(nombreDato nombreVariable);
+```
+
+Ahora ¿Cómo aplicamos esto en el código? Vamos a hacer un ejercicio para pasar un número de negativo a positivo. **OJO**, si leiste bien dije un número, no especifiqué que tipo de dato vamos a usar, por lo que vamos a usar el template para ingresar el tipo de dato que querramos.
+
+```cpp
+  //Sacar el valor absoluto de un número sin conocer el tipo de dato que vamos a usar.
+  #include <iostream>
+  using namespace std;
+
+  template <class datoGenerico>
+  void mostrarABS(datoGenerico numero);
+
+  int main(){
+      int numA = 19;
+      float numB = -19.6;
+      double numC = 19.0603;
+      mostrarABS(numA);
+      mostrarABS(numB);
+      mostrarABS(numC);
+      return 0;
+  }
+
+  template <class datoGenerico>
+  void mostrarABS(datoGenerico numero){
+      if (numero<0){
+          numero *= -1;
+      }
+      cout << "el valor absoluto del número es: " << numero << endl;
+  }
+```
+
+el programa lo que haces es que recibe cualquier tipo de dato, en nuestro caso ingresamos 3 números con tipos de datos diferentes:
+
+```cpp
+  numA = 19; //int
+  numB = -19.6; //float
+  numC = 19.0603; //double
+``` 
+ahora bien, así como podemos pasarle valores genéricos, podemos usar ese valor genérico como función también.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+//usamos el tipo genérico.
+template <class T>
+T sumar(T numA, T numB){
+  return numA + numB;
+}
+```
+
+
+Ya sabemos cómo se usan las funciones y tipos de datos genéricos, ahora nos toca a nosotros hacer ejercicios.
+
+### Ejercicios
+1. Crea una función template que compare dos valores de cualquier tipo y devuelva el mayor.
+2. Escribe una función template que acepte dos valores de cualquier tipo y devuelva su suma.
