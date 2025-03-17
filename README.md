@@ -1,11 +1,12 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=B11032&center=true&vCenter=true&width=435&lines=Bienvenidos+todos%2Fas;Algoritmos+y+Estructuras+de+Datos)](https://git.io/typing-svg)
 
-Soy **Fabrizzio Franco Reyes**, estudiante de ingeniería en sistemas y ayudante de cátedra de Algoritmos y Estructuras de Datos en la **Universidad Tecnológica Nacional (UTN)**. Este repositorio ha sido creado como complemento para la cursada. Aquí encontrarás:
+Soy **Fabrizzio Franco Reyes**, estudiante de ingeniería en sistemas y ayudante de cátedra de Algoritmos y Estructuras de Datos en la **Universidad Tecnológica Nacional (UTN)**. Este repositorio ha sido creado como introducción y apoyo en algunos temas de c++ que se verán durante la cursada, **NO abarca todo el contenido de la materia**.
 
-- **Explicaciones detalladas** de conceptos clave.
-- **Recursos** adicionales (lecturas, referencias, y material de apoyo).
-- **Ejercicios prácticos** para afianzar los temas vistos en clase.
-- **Ejemplos de código en C++** para facilitar el aprendizaje.
+### Links útiles
+- - **Drive con archivos complementarios**: [Drive de Algoritmos y Estructuras de Datos](https://drive.google.com/drive/folders/1Yh2mXjgQEVmtCc7QgVWKvTwcUjNNXisb?usp=sharing)
+
+> [!WARNING]
+> Nota del editor: Para poder entrar a algunos enlaces debes ser alumno de la UTN.
 
 ### Contacto
 
@@ -16,14 +17,22 @@ Si tienes dudas o consultas:
 - **LinkedIn**: [Perfil de LinkedIn](https://linkedin.com/in/fabrizziofrancoreyes)
 - **GitHub**: [Perfil GitHub](https://github.com/ffrancoreyes)
 
+![GitHub Repo stars](https://img.shields.io/github/stars/ffrancoreyes/ayed)
+
+
 ### índice:
 - [Introducción: Configurando nuestro entorno de desarrollo](#introducción-configurando-nuestro-entorno-de-desarrollo)
   - [CodeBlocks](#codeblocks)
     - [Instalación y configuración:](#instalación-y-configuración)
-  - [Dev C++](#dev-c)
+  - [Online GDB - C++](#online-gdb---c)
     - [Instalación y configuración:](#instalación-y-configuración-1)
-  - [Visual Studio Code (VSCode)](#visual-studio-code-vscode)
+  - [Dev C++](#dev-c)
     - [Instalación y configuración:](#instalación-y-configuración-2)
+  - [CLion](#clion)
+    - [Instalación y configuración:](#instalación-y-configuración-3)
+    - [Obtención gratuita para estudiantes:](#obtención-gratuita-para-estudiantes)
+  - [Visual Studio Code (VSCode)](#visual-studio-code-vscode)
+    - [Instalación y configuración:](#instalación-y-configuración-4)
 - [Capítulo 1: Hola Mundo](#capítulo-1-hola-mundo)
   - [Características clave](#características-clave)
   - [Hola Mundo](#hola-mundo)
@@ -45,12 +54,29 @@ Si tienes dudas o consultas:
 - [Capitulo N: Templates o plantillas de función y tipos de datos dinámicos.](#capitulo-n-templates-o-plantillas-de-función-y-tipos-de-datos-dinámicos)
   - [¿Qué es un template en C++?](#qué-es-un-template-en-c)
   - [¿Cómo declaramos un template y como lo usamos?](#cómo-declaramos-un-template-y-como-lo-usamos)
+  - [Tipo de dato dinámico](#tipo-de-dato-dinámico)
   - [Ejercicios](#ejercicios-2)
+- [Capítulo N1: Punteros](#capítulo-n1-punteros)
+  - [¿Qué es un Puntero?](#qué-es-un-puntero)
+- [Capitulo N3: Archivos](#capitulo-n3-archivos)
+  - [¿Qué es un archivo?](#qué-es-un-archivo)
+  - [**Tipos de Archivos**](#tipos-de-archivos)
+    - [Archivos de Texto](#archivos-de-texto)
+    - [Archivos Binarios](#archivos-binarios)
+  - [**Funciones Básicas**](#funciones-básicas)
+  - [**Manejo de Registros**](#manejo-de-registros)
+    - [Operaciones comunes](#operaciones-comunes)
+  - [**Patrones Algorítmicos**](#patrones-algorítmicos)
+    - [Recorrido Secuencial](#recorrido-secuencial)
+    - [Apareo](#apareo)
+    - [Corte de Control](#corte-de-control)
+  - [**Uso de Templates**](#uso-de-templates)
+  - [**Ejemplos Prácticos**](#ejemplos-prácticos)
 
 
 ## Introducción: Configurando nuestro entorno de desarrollo
 
-A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que significa que necesitaremos un entorno para escribir y compilar nuestro código. Existen varias opciones de IDEs (Entornos de Desarrollo Integrados) que puedes usar, te dejo tres opciones, elige el que mejor se ajuste a tus necesidades.
+A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que significa que necesitaremos un entorno para escribir y compilar nuestro código. Existen varias opciones de IDEs (Entornos de Desarrollo Integrados) que puedes usar, te dejo cuatro opciones, elige el que mejor se ajuste a tus necesidades.
 
 ### CodeBlocks
 
@@ -67,6 +93,15 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
 
 ---
 
+### Online GDB - C++
+
+**Online GBD** es un compilador en línea para distintos lenguajes de programación, esta es una alternativa en caso de que no querramos instalar un compilador en nuestra computadora, ya sea por preferencia personal o porque nuestra computadora no puede mover un compilador.
+
+#### Instalación y configuración:
+1. **En Google Chrome**: ingresar el siguiente link [Compilador de C++ en línea](https://onlinegdb.com/AjJFgeF8V)
+
+---
+
 ### Dev C++
 
 **Dev C++** es otro IDE popular para aprender C y C++. Es muy simple y fácil de configurar, lo que lo convierte en una opción práctica para empezar a programar sin complicaciones.
@@ -79,6 +114,28 @@ A lo largo de esta cursada veremos **C++**, un lenguaje compilado, lo que signif
    - Ve a **Tools > Compiler Options**.
    - Verifica que MinGW esté seleccionado como compilador.
    - Puedes crear un nuevo proyecto desde **File > New > Project** y seleccionar "Console Application".
+
+---
+
+### CLion
+
+**CLion** es un IDE profesional desarrollado por JetBrains, diseñado para facilitar el desarrollo en C y C++ con herramientas avanzadas como depuración integrada, autocompletado inteligente y navegación de código eficiente. Es una excelente opción para quienes buscan una experiencia más completa y productiva en su desarrollo en C++.
+
+#### Instalación y configuración:
+1. **Descarga**: Visita la página oficial de JetBrains [CLion](https://www.jetbrains.com/clion/download/) y descarga la versión para tu sistema operativo.
+2. **Instalación**: Ejecuta el instalador y sigue los pasos indicados.
+3. **Configuración**:
+   - Al abrir CLion por primera vez, selecciona el compilador y el entorno de desarrollo.
+   - Puedes utilizar MinGW, Cygwin, o WSL (para Windows) o directamente GCC/Clang en sistemas Linux/macOS.
+   - Crea un nuevo proyecto desde **File > New Project** y selecciona "C++ Executable".
+
+#### Obtención gratuita para estudiantes:
+JetBrains ofrece una licencia gratuita para estudiantes a través de su programa de educación. Para obtener CLion sin costo:
+1. **Accede a la página de licencias educativas**: [JetBrains para estudiantes](https://www.jetbrains.com/community/education/#students).
+2. **Regístrate con SheerID**: Deberás presentar una constancia de alumno regular para validar tu estatus estudiantil.
+3. **Descarga y activa la licencia**: Una vez aprobado, recibirás una licencia gratuita por un año, renovable mientras sigas siendo estudiante.
+
+
 
 ---
 
@@ -241,10 +298,11 @@ A este lo usamos cuando necesitamos dejar escrita mas de una línea de comentari
 > [!CAUTION]
 > El **kebab-case**, No se usa en C++ porque los guiones (`-`) no son válidos en los nombres de variables o funciones. Los guiones son interpretados como operadores de resta, por lo que no se pueden usar en nombres.
 
-  o sea: 
+  En resúmen: 
   - Para variables y funciones: **camelCase**
   - Para clases: **PascalCase**.
   - Para constantes y macros: **snake_case**.
+  - **NUNCA** debemos usar: **kebab-case**
 
 ### Ejercicios:
 1. Escriba un programa que devuelva el texto `Hola me llamo <nombre>, como estás?`
@@ -410,37 +468,8 @@ Ya tenemos mas conocimientos y un panorama general sobre lo que son los **tipos 
 
 ### Ejercicios:
 
-1. **Cuál de las siguientes sentencias son correctas para la ecuación algebraica?  y= (ax^3) + 7**  
-   - a. `y = a * x * x * x + 7`  
-   - b. `y = a * x * x * (x + 7)`  
-   - c. `y = (a * x) * x * (x + 7)`  
-   - d. `y = (a * x) * x * x + 7`  
-   - e. `y = a * (x * x * x) + 7`  
-   - f. `y = a * (x * x * x + 7)`  
+Podrás encontrar ejercicios en la guía de **Algoritmos y Estructuras de Datos**. 
    
-
-2. **Escriba un programa que pida al usuario dos números e informe la suma, la resta, el producto y el cociente de los mismos**  
-   
-
-3. **Imprima un programa que imprima los números del 1 al 4 en una misma línea de las siguientes maneras:**
-   - a. Utilizando un solo operador de inserción de flujo.
-   - b. Una única sentencia con 4 operadores de inserción de flujo.
-   - c. Utilizando cuatro sentencias.  
-   
-
-4. **Escriba un programa que reciba un número que represente el radio de un círculo e imprima el diámetro, la circunferencia y el área**  
-   
-
-5. **Que imprime el siguiente código?**  
-   - a. `std::cout << “*\n**\n***\n****” << std::endl;`  
-   - b. `std::cout << 'A';`  
-   - c. `std::cout << static_cast<int>('A');` (investigue qué es `static_cast`)  
-   
-
-6. **Escriba un programa que calcule los cuadrados y cubos de los números de 0 a 10 y los muestre por pantalla**  
-
-
-
 ## Capítulo 3: Condicionales
 En nuestra vida diaria nosotros solemos tomar decisiones de diferentes tipos, un ejemplo puede ser, `Llegué a mi casa de cursar algoritmos, hay comida en casa? Si hay comida almuerzo. Si no hay comida, me preparo de cocinar`. La lógica en c++ funciona de la misma manera. Los **condicionales** permiten que un programa tome decisiones y ejecute diferentes bloques de código según ciertas condiciones. Es decir, controlan el **flujo de ejecución** del programa dependiendo de si una condición es verdadera o falsa. Las principales estructuras condicionales que veremos son:
 
@@ -703,9 +732,231 @@ T sumar(T numA, T numB){
 }
 ```
 
+### Tipo de dato dinámico
+
+En esta parte vamos a hablar de un tipo de dato dinámico o más que dinámico, flexible. Este tipo de dato es el **Auto**, el mismo puede adaptarse a lo que nosotros le digamos o lo que le asignemos, por ejemplo
+
+```cpp
+  //normalmente declaramos una variable así
+  int numA;
+```
+
+Esto es correcto, pero la limitante es que solo le podemos pasar un tipo de dato, en caso de que querramos pasarle cualquier tipo de dato, podemos hacerlo de la siguiente forma.
+
+```cpp
+#include <iostream>
+using namespace std; 
+
+int main(){
+    auto numA = 100;
+    cout << "numA x 10: " << numA*10;
+
+
+    return 0;
+}
+```
+
+Trabajar con auto también tiene ciertas limitantes, no es tan libre por lo que vamos a tener que saber como usarla y en que momentos usarla.
+
 
 Ya sabemos cómo se usan las funciones y tipos de datos genéricos, ahora nos toca a nosotros hacer ejercicios.
 
 ### Ejercicios
 1. Crea una función template que compare dos valores de cualquier tipo y devuelva el mayor.
 2. Escribe una función template que acepte dos valores de cualquier tipo y devuelva su suma.
+
+## Capítulo N1: Punteros
+
+Nosotros venimos usando variables a lo largo de la materia y sabemos que estas se almacenan en un lugar de la memoria, pero... ¿cómo accedemos nosotros a esa dirección de memoria?
+Acá es donde entran los punteros.
+
+### ¿Qué es un Puntero?
+Un **puntero** es una variable que **almacena la dirección de memoria de otra variable**. No almacena un valor como un entero o un carácter, sino que guarda la ubicación de ese valor en la memoria. Esto permite un control más directo sobre cómo se manipulan y gestionan los datos en tu programa. ¿Cómo podemos usar los punteros para conocer las direcciónes de memoria? 
+Podemos usar este apunte para saber que significa cada cosa y como lo podemos usar:
+
+```cpp
+  &n = la dirección de n
+  *n = la variable cuya dirección está almacenada en n
+
+```
+
+entonces, supongamos que declaro una variable A y quiero saber la dirección de memoria donde está guardada. Lo podemos hacer de la siguiente forma
+
+## Capitulo N3: Archivos
+
+### ¿Qué es un archivo?
+
+Los archivos en `C++` permiten la persistencia de datos, permitiendo que un programa guarde información más allá de su ejecución. Se utilizan ampliamente para manejar grandes volúmenes de datos y facilitar el procesamiento estructurado.
+
+
+
+### **Tipos de Archivos**
+#### Archivos de Texto
+- **Definición**: Contienen datos legibles por humanos, organizados en líneas o cadenas.
+- **Modos de apertura**:
+  - `"r"`: Leer.
+  - `"w"`: Escribir (sobrescribe contenido existente).
+  - `"a"`: Añadir al final.
+
+#### Archivos Binarios
+- **Definición**: Almacenan datos en formato binario, más eficiente y compacto.
+- **Modos de apertura**:
+  - `"rb"`: Leer.
+  - `"wb"`: Escribir.
+  - `"ab"`: Añadir.
+
+| **Modos de Apertura** | **Texto**                                                    | **Binario**                                                        |
+|------------------------|-------------------------------------------------------------|--------------------------------------------------------------------|
+| `r`                   | Abre un archivo para lectura (debe existir).                | `rb`: Abre un archivo en modo binario para lectura.               |
+| `w`                   | Abre un archivo para escritura, sobrescribiendo el contenido si ya existe. | `wb`: Abre un archivo en modo binario para escritura, sobrescribiéndolo si existe. |
+| `a`                   | Abre un archivo para agregar (escribir al final sin sobrescribir). | `ab`: Abre un archivo en modo binario para agregar al final o lo crea si no existe. |
+| `r+`                  | Abre un archivo para lectura y escritura (debe existir).    | `r+b`: Abre un archivo en modo binario para lectura y escritura.  |
+| `w+`                  | Abre un archivo para lectura y escritura, sobrescribiéndolo si ya existe. | `w+b`: Abre un archivo en modo binario para lectura y escritura, sobrescribiéndolo. |
+| `a+`                  | Abre un archivo para lectura y escritura, pero solo agrega al final. | `a+b`: Abre un archivo en modo binario para lectura y escritura, permitiendo agregar al final. |
+
+
+
+### **Funciones Básicas**
+Las funciones estándar de la biblioteca `<stdio.h>` son fundamentales para el manejo de archivos:
+- **`fopen`**: Abre un archivo.
+  ```cpp
+  FILE* f = fopen("archivo.dat", "rb");
+  ```
+- **`fclose`**: Cierra un archivo.
+  ```cpp
+  fclose(f);
+  ```
+- **`fread` y `fwrite`**: Permiten leer y escribir bloques de datos.
+  ```cpp
+  fread(&variable, sizeof(tipo), 1, f);
+  fwrite(&variable, sizeof(tipo), 1, f);
+  ```
+- **`fseek` y `ftell`**: Controlan la posición del puntero en el archivo.
+  ```cpp
+  fseek(f, 0, SEEK_SET); // Ir al inicio del archivo
+  ftell(f);             // Obtener posición actual
+  ```
+- **`feof`**: Verifica si se alcanzó el final del archivo.
+
+---
+
+### **Manejo de Registros**
+El uso de estructuras permite manejar registros en archivos binarios:
+```cpp
+struct Alumno {
+    int dni;
+    char nombre[25];
+};
+```
+#### Operaciones comunes
+1. **Escritura de registros**:
+   ```cpp
+   Alumno a = {12345, "Juan"};
+   fwrite(&a, sizeof(Alumno), 1, f);
+   ```
+2. **Lectura de registros**:
+   ```cpp
+   Alumno a;
+   fread(&a, sizeof(Alumno), 1, f);
+   ```
+3. **Acceso directo**:
+   - Acceder al registro en la posición *N*:
+     ```cpp
+     fseek(f, (N-1) * sizeof(Alumno), SEEK_SET);
+     fread(&a, sizeof(Alumno), 1, f);
+     ```
+
+---
+
+### **Patrones Algorítmicos**
+#### Recorrido Secuencial
+Dos enfoques:
+1. **Lectura anticipada**:
+   ```cpp
+   while (fread(&a, sizeof(Alumno), 1, f)) {
+       // Procesar registro
+   }
+   ```
+2. **Control simultáneo**:
+   ```cpp
+   Alumno a;
+   fread(&a, sizeof(Alumno), 1, f);
+   while (!feof(f)) {
+       // Procesar registro
+       fread(&a, sizeof(Alumno), 1, f);
+   }
+   ```
+
+#### Apareo
+Combina registros de múltiples archivos o estructuras.
+```cpp
+while (!feof(f1) && !feof(f2)) {
+    if (r1.clave < r2.clave) {
+        // Procesar r1
+        fread(&r1, sizeof(r1), 1, f1);
+    } else {
+        // Procesar r2
+        fread(&r2, sizeof(r2), 1, f2);
+    }
+}
+```
+
+#### Corte de Control
+Agrupa datos por campos comunes para presentar información ordenada.
+```cpp
+while (fread(&a, sizeof(Alumno), 1, f)) {
+    if (a.grupo != grupoActual) {
+        // Procesar nuevo grupo
+        grupoActual = a.grupo;
+    }
+    // Procesar registro actual
+}
+```
+
+---
+
+### **Uso de Templates**
+Facilita el manejo de estructuras de datos genéricas:
+- **Template de lectura**:
+  ```cpp
+  template <typename T>
+  T leer(FILE* f) {
+      T r;
+      fread(&r, sizeof(T), 1, f);
+      return r;
+  }
+  ```
+- **Template de escritura**:
+  ```cpp
+  template <typename T>
+  void grabar(FILE* f, T r) {
+      fwrite(&r, sizeof(T), 1, f);
+  }
+  ```
+
+---
+
+### **Ejemplos Prácticos**
+1. **Crear y escribir en un archivo**:
+   ```cpp
+   FILE* f = fopen("data.dat", "wb+");
+   Alumno a = {12345, "Fabrizzio"};
+   fwrite(&a, sizeof(Alumno), 1, f);
+   fclose(f);
+   ```
+
+2. **Leer un archivo secuencialmente**:
+   ```cpp
+   FILE* f = fopen("data.dat", "rb");
+   Alumno a;
+   while (fread(&a, sizeof(Alumno), 1, f)) {
+       cout << a.dni << ", " << a.nombre << endl;
+   }
+   fclose(f);
+   ```
+
+3. **Acceder al último registro**:
+   ```cpp
+   fseek(f, -sizeof(Alumno), SEEK_END);
+   fread(&a, sizeof(Alumno), 1, f);
+   ```
